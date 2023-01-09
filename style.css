@@ -1,0 +1,847 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body,html{
+    height:100%;
+    width: 100%;
+    background-color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+nav{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 1%;
+    border-right: 0.5px solid rgb(53, 52, 52);
+}
+
+.cmnBtn{
+    height: 10%;
+    width: 60%;
+    margin-left: 25%;
+    display: flex;
+    align-items: center;
+    height: 7%;
+    margin-bottom: 2.5%;
+    border: none;
+    padding: 0.5% 2%;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.cmnBtn svg{
+    width:25px;
+}
+
+.cmnBtn:hover{
+    border-radius: 20px;
+    border: 1px solid white;
+    background-color: rgb(40, 38, 38);
+    fill: #1DA1F2;
+}
+
+
+
+.logo{
+    color: #1DA1F2;
+    height: 10%;
+    width: max-content;
+    margin-left: 25%;
+    display: flex;
+    align-items: center;
+    height: 7%;
+    font-weight:bolder;
+    margin-bottom: 2.5%;
+    border: none;
+    padding-bottom: 8%;
+}
+
+
+.tweet-btn{
+    height: 10%;
+    width: 50%;
+    margin-left: 25%;
+    display: flex;
+    align-items: center;
+    height: 7%;
+    border: none;
+    margin-top: 4%;
+    
+}
+
+.tweet-btn svg{
+    padding: 5%;
+    border-radius: 50%;
+    background-color: #1DA1F2;
+    
+}
+
+nav button{
+    background-color: transparent;
+    cursor: pointer;
+}
+
+nav button i{
+    font-size: 35px;
+    width: 25%;
+    margin-right: 10%;
+}
+
+nav button svg{
+    font-size: 35px;
+    width: 25%;
+    margin-right: 10%;
+    fill: white;
+}
+
+nav button p{
+    color: white;
+    font-size: large;
+}
+
+.user{
+    margin-top: 15%;
+    font-size: x-large;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin-left: 22.5%;
+}
+
+.user img{
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+}
+
+.message-users{
+    width: 30%;
+    display: none;
+    border-right: 1px solid rgb(53, 52, 52);
+}
+
+.message-header{
+    color: white;
+    font-size: 22px;
+    font-weight: 600;
+    padding: 2% 0%;
+    padding-left: 3%;
+    border-bottom:1px solid rgb(53, 52, 52) ;
+}
+
+.message-welcome button{
+    background-color: #1DA1F2;
+    color: white;
+    padding: 2.5% 4%;
+    border-radius: 20px;
+    margin-left: 5%;
+    margin-top: 5%;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.welcome-inbox{
+    color: white;
+    font-size: 34px;
+    font-weight: bold;
+    width: 70%;
+    margin-left: 5%;
+    margin-top:10% ;
+}
+
+.info-inbox{
+    color: rgb(130, 127, 127);
+    font-size: 16px;
+    width: 78%;
+    margin-left: 5%;
+    margin-top: 3%;
+}
+
+.message-select{
+    margin-top: 50%;
+    height: max-content;
+    display: none;
+}
+
+.message-select button{
+    background-color: #1DA1F2;
+    color: white;
+    padding: 2% 4%;
+    border-radius: 20px;
+    margin-left: 5%;
+    margin-top: 5%;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.center-content-section{
+    width: 42%;
+    border-right: 0.5px solid rgb(53, 52, 52);
+    overflow-y: scroll;
+    position: relative;
+}
+
+.center-content-section::-webkit-scrollbar{
+    width: 0%;
+}
+
+.top-of-center{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 4%;
+    width: 95%;
+    padding: 1%;
+    position: sticky;
+    top: 0;
+    background-color: rgba(0, 0, 0,0.5);
+}
+
+.top-of-center button{
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    font-size: 24px;
+    border: none;
+    font-weight: bold;
+    padding: 1%;
+}
+
+.top-of-center button img{
+    color: white;
+    height: 24px;
+    padding: 25%;
+}
+
+.top-of-center button img:hover{
+    border-radius: 50%;
+    background-color: rgb(30, 29, 29);
+}
+
+
+.tweet-type-container{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    border-top: 0.5px solid rgb(53, 52, 52);
+    border-bottom: 0.5px solid rgb(53, 52, 52);
+    padding-bottom: 1%;
+}
+
+.tweet-type-here{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.tweet-type-here textarea{
+    width: 100%;
+    height: 60%;
+    resize: none;
+    outline: none;
+    border: none;
+    margin-top: 5% ;
+    font-size: large;
+    font-weight: 600;
+    background-color: black;
+    color:white;
+}
+
+.tweet-type-here textarea::-webkit-scrollbar{
+    width: 10px;
+}
+
+
+#left-part-in-tweet-type{
+    width: 12%;
+    display: flex;
+    justify-content: center;
+}
+
+.user-face-in-tweet-type{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-top: 20%;
+    border-color: transparent;
+}
+
+.user-face-in-tweet-type img{
+    width: 46px;
+    height: 45.5px;
+    border-radius: 50%;
+}
+
+.buttons-in-tweet-type-area{
+    width: 100%;
+    height: 40%;
+    display: flex;
+}
+
+.add-feature-tweet{
+    width: 50%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.add-feature-tweet button{
+    width: 12%;
+    border: none;
+    background-color: black;
+    margin-right: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.add-feature-tweet button svg{
+    height: 30px;
+    width: 30px;
+}
+
+.tweet-submit{
+    width: 17%;
+    height: 85%;
+    margin-left: 20%;
+    background-color: #1DA1F2;
+    border-radius: 20px;
+    align-self: center;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: large;
+    font-weight: 600;
+    font-family:'Times New Roman', Times, serif;
+}
+
+.tweet-post{
+    width: 100%;
+    height: max-content;
+    background-color: black;
+    display: flex;
+    padding-bottom: 1%;
+    border-bottom: 1px solid rgb(73, 72, 72);
+    position: relative;
+}
+
+.posted-text{
+    width: 90%;
+    height: max-content;
+}
+
+.name-who-posted{
+    margin-top: 1.5%;
+    height: max-content;
+    color: white;
+    padding-bottom: 1%;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#at-the-rate{
+    margin-left: 1%;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.who-posted{
+    width: 10%;
+    padding: 0% 2%;
+    border-right: 1px solid black;
+    display: flex;
+    background-color: black;
+    justify-content: center;
+}
+
+.who-posted img{
+    align-items: flex-start;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    padding-top: 15%;
+}
+
+.posted-text-content{
+    width: 100%;
+    height: max-content;
+    color: white;
+    padding-bottom: 2%;
+} 
+
+
+.posted-text img{
+    width: 95%;
+    height: 100%;
+    
+}
+
+.time{
+    width: 100%;
+    height: max-content;
+    color: white;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+}
+
+.click-action1{
+    width: 28px;
+    height: 30px;
+    padding: 0.5% 1%;
+    border-radius: 50%;
+    position: absolute;
+    right: 0;
+    top: 0%;
+    background-color:rgb(24, 23, 23) ;
+    color: aliceblue;
+    cursor: pointer;
+}
+
+.click-action2{
+    display: none;
+    width: 25px;
+    height: 30px;
+    padding: 0.5% 1%;
+    border-radius: 50%;
+    position: absolute;
+    right: 0;
+    top: 0%;
+    color: aliceblue;
+    background-color:rgb(52, 51, 51) ;
+    cursor: pointer;
+}
+
+.tweet-action{
+    display: none;
+    flex-direction: column;
+    width: 15%;
+    margin-right: 5%;
+    margin-top: 2%;
+}
+
+.tweet-edit{
+    width: 100%;
+    background-color:black;
+    color: yellowgreen;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 2% 0%;
+    border-color:yellowgreen ;
+    margin-bottom: 5%;
+    cursor: pointer;
+}
+
+.tweet-delete{
+    width: 100%;
+    background-color: black;
+    color: red;
+    border-color: red;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 2% 0%;
+    cursor: pointer;
+}
+
+.tweet-body span{
+    display: none;
+}
+
+.right-content-section{
+    width: 35%;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+}
+
+.head-tag{
+    font-weight: bolder;
+    color: white;
+    font-size: 20px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 2%;
+    padding-left: 3%;
+}
+
+.right-content-section input{
+    width: 70%;
+    height: 45px;
+    border-radius: 30px;
+    background-color: black;
+    border: none;
+    margin-top: 1%;
+    margin-left: 5%;
+    background-color: rgb(24, 23, 23);
+    padding: 1% 0;
+}
+
+.right-content-section ul{
+    overflow-y: scroll;
+    margin-left: 5%;
+    margin-top: 1%;
+}
+
+.right-content-section ul::-webkit-scrollbar{
+    width: 10px;
+}
+
+.happening{
+    width: 70%;
+    height: max-content;
+    padding:3% 0% 4% 2%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 1%;
+    margin-top:3%;
+    border-radius: 20px;
+    background-color: rgb(24, 23, 23);
+}
+
+.tags{
+    padding: 2% 4%;
+}
+
+.info{
+    color: rgb(192, 192, 185);
+    font-size: 13px;
+}
+
+.hash-tag{
+    color: white;
+    font-weight: 600;
+    font-size: 15px;
+    margin: 2% 0%;
+}
+
+.show-more{
+    border: none;
+    color: #1DA1F2;
+    background-color: transparent;
+    text-align: left;
+    font-weight: 500;
+    font-size: 15px;
+    margin-top: 2%;
+    padding-left: 4%;
+}
+
+.who-to-follow-container{
+    width: 68%;
+    height: max-content;
+    padding:2% 0% 2% 4%;
+    display: flex;
+    margin-left: 1%;
+    margin-top:3%;
+    border-radius: 20px;
+    flex-wrap: wrap;
+    background-color: rgb(24, 23, 23);
+}
+
+.follow-profile{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin-top: 2%;
+}
+
+.who-to-follow-container img{
+    width: 48px;
+    height: 45.5px;
+    border-radius: 50%;
+    border:1px solid rgb(53, 52, 52);
+    margin-left: 2%;
+    margin-bottom: 5%;
+}
+
+.who-to-follow-container a{
+    width: 45%;
+    display :flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: white;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 5%;
+}
+
+.who-to-follow-container button{
+    width: max-content;
+    height: max-content;
+    padding: 2% 4%;
+    border-radius: 20px;
+    margin-bottom: 5%;
+}
+
+.explore{
+    display: none;
+    border-bottom: 1px solid rgb(73, 72, 72) ;
+}
+
+.explore-btn{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-bottom: 1px solid rgb(73, 72, 72) ;
+    width: 100%;
+}
+
+.explore-btn input{
+    width: 82%;
+    height: 40px;
+    border-radius: 20px;
+    margin-bottom: 0.5%;
+    background-color: rgb(24, 23, 23);
+    border-color: transparent;
+    margin-top: 1%;
+}
+
+.explore-btn button{
+    width: 20%;
+    padding: 1.5% 0;
+    color: white;
+    font-weight: bold;
+    background-color:transparent ;
+    border: none;
+    font-size: 15px;
+}
+
+.company-details{
+    width: 70%;
+    margin-left: 5%;
+    margin-top: 3%;
+    margin-bottom: 5%;
+}
+
+.company-details a{
+    text-decoration: none;
+    color: rgb(102, 102, 101);
+    font-size: 12px;
+    padding: 1% ;
+    font-weight: 500;
+}
+
+.company-details p{
+    color: rgb(102, 102, 101);
+    font-size: 13px;
+    padding: 1% ;
+    font-weight: 600;
+    margin-top: 1%;
+}
+
+.notification{
+    width: 100%;
+    display: none;
+}
+
+.notification-btn{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-bottom: 1px solid rgb(73, 72, 72);
+}
+
+.notification-btn p{
+    width: 100%;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 5%;
+    padding-top: 2%;
+    padding-left: 2%;
+}
+
+.notification-btn button{
+    background-color: transparent;
+    color: white;
+    width: 33.3%;
+    font-size: medium;
+    font-weight: 600;
+    padding: 1%;
+}
+
+.notification-items{
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    
+}
+
+.notification-items-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2% 0;
+    border-bottom: 1px solid rgb(73, 72, 72);
+}
+
+.bookmarks-container{
+    display: none;
+}
+
+.head-of-bookmarks{
+    padding: 1% 0;
+}
+
+.bookmarks-head-word1{
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    margin-left: 3%;
+    width: max-content;
+}
+
+.bookmarks-head-word2{
+    color:rgb(192, 192, 185) ;
+    margin-left: 3%;
+    font-size: small;
+}
+
+.no-bookmark{
+    width: 70%;
+    margin-left: 15%;
+    margin-top: 10%;
+}
+
+.no-bookmark img{
+    width: 70%;
+    margin-left: 15%;
+}
+
+.welcome-bookmarks{
+    color: white;
+    font-size: 28px;
+    font-weight: 700;
+    width: 80%;
+    margin-left: 20%;
+}
+
+.bookmarks-info{
+    color:rgb(192, 192, 185) ;
+    width: 66%;
+    font-size: smaller;
+    margin-left: 21%;
+}
+
+.lists-container{
+    display: none;
+}
+
+.lists-header{
+    padding: 1% 0;
+    display: flex;
+}
+
+.lists-header button{
+    background-color: transparent;
+    color: white;
+    font-size: 20px;
+    margin-right: 3%;
+    margin-left: 3%;
+    cursor: pointer;
+}
+
+.planned-lists{
+    padding-bottom: 5%;
+    border-bottom: 1px solid rgb(73, 72, 72);
+}
+
+.list-head{
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    margin-left: 3%;
+    margin-top: 2%;
+}
+
+.list-para{
+    color:rgb(192, 192, 185);
+    margin-left: 7%;
+    margin-top: 7%;
+}
+
+.profile-view{
+    display: none;
+    border-bottom: 1px solid rgb(192, 192, 185);
+}
+
+.profile-details{
+    position: relative;
+}
+
+.cover-pic{
+    width: 100%;
+    height: 25%;
+}
+
+.profile-pic{
+    width: 22%;
+    height: 35%;
+    border-radius: 50%;
+    position: absolute;
+    top: 25%;
+    left: 2.5%;
+}
+
+#profile-edit-area{
+    width: 100%;
+    padding-bottom: 5%;
+}
+
+#profile-edit-area button{
+    padding: 1%;
+    border-radius: 20px;
+    color: white;
+    font-weight: 700;
+    background-color: transparent;
+    border: 1px solid rgb(192, 192, 185);
+    width: max-content;
+    margin-left: 80%;
+    margin-bottom: 10%;
+    margin-top: 2%;
+}
+
+.joined-date{
+    color:rgb(192, 192, 185) ;
+    margin-left: 3%;
+    font-size: 15px;
+    margin-top: 2%;
+    margin-left: 3%;
+}
+
+#follow-info{
+    display: flex;
+    padding: 1% 0;
+}
+
+#follow-info p{
+    margin-left: 3%;
+    color:rgb(192, 192, 185);
+}
+
+#profile-area-btns{
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+}
+
+#profile-area-btns button{
+    width: 25%;
+    padding: 1% 0;
+    background-color: transparent;
+    color: white;
+
+}
+
+.my-tweet-post{
+    display: block;
+}

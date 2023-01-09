@@ -1,0 +1,45 @@
+@media only screen and (max-width:980px){
+    .right-content-section{
+        display: none;
+    }
+
+    nav{
+        width: 35%;
+    }
+
+    .center-content-section{
+        width: 65%;
+    }
+}
+
+@media only screen and (max-width:700px){
+
+    nav{
+        width: 12%;
+    }
+    .cmnBtn{
+        width: max-content;
+    }
+    .cmnBtn p{
+        display: none;
+    }
+    .center-content-section{
+        width: 88%;
+    }
+    .user{
+        display: none;
+    }
+    .tweet-btn{
+        display: none;
+    }
+    .welcome-inbox{
+        font-size: 16px;
+    }
+    .info-inbox{
+        font-size: 10px;
+    }
+    .profile-pic{
+        height: 90px;
+        width: 85px;
+    }
+}
